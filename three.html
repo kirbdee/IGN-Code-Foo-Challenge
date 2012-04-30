@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<title>IGN Code Foo Challenge</title>
+		<link rel="stylesheet" href="css/core.css"/>
+	</head>
+	<body>
+		<div id="wrapper"><!--start #wrapper-->
+			<header>
+				<div id="logo">
+					<h1>Code Foo Challenge</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Intro</a></li>
+						<li><a href="one.html">One</a></li>
+						<li><a href="two.html">Two</a></li>
+						<li><a href="three.html" class="active">Three</a></li>
+						<li><a href="four.html">Four</a></li>
+						<li><a href="five.html">Five</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section>
+				<h2>LICENSE PLATES</h2>
+				<h3>You own a license plate manufacturing company. Write a program that takes a population and determines the simplest pattern that will produce enough unique plates. Since all the plates that match the pattern will be generated, find the pattern that produces the least excess plates. Use a combination of letters (A-Z) and numbers (0-9).</h3>
+				<div id="three-area"><!--start #three-area-->
+					<div>
+					<label for="three-population">Enter Population:</label><input type="text" id="three-population"></input>
+					</div>
+					<div>
+					<button id="three-calculate">Calculate</button>
+					</div>
+					<div>
+					<label for="three-population2">Population: </label><output id="three-population2"></output>	
+					</div>
+					<div>
+					<label for="three-pattern">Pattern: </label><output id="three-pattern"></output>	
+					</div>
+					<div>
+					<label for="three-plates">Total Plates: </label><output id="three-plates"></output>
+					</div>
+					<div>
+					<label for="three-excess">Excess Plates: </label><output id="three-excess"></output>			
+					</div>
+				</div><!--end #three-area-->
+				<p>To calculate the optimal pattern given a population. I first looked at the possibilities and ranges of an all number pattern and an all letter pattern. This gives me two equations to look at <span style="color:blue;">y=10^x</span> and <span style="color:red;">y=26^x</span></p>
+				<img class="graph" src="img/graph1.png">
+				<img class="graph" src="img/graph2.png">
+				<div class="clear"></div>
+				<p>From there I notice that at any given value it can be represented by both a letter only and number only pattern. So given a number I figure out what integer value x would best fit for <span style="color:blue;">y=10^x</span> and <span style="color:red;">y=26^x</span>. From there I would use those two values as the bounds for the possible length of my pattern and brute forced the combinations in between, calculating and saving the most optimal solution(lowest excess number of plates).</p>
+			</section>
+		</div><!--end #wrapper-->
+		<footer><p>Designed and developed by <a href="http://kirbydomingo.com">Kirby Domingo</a></p></footer>
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="js/scripts.js"></script>
+</html>
